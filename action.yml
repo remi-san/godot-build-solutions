@@ -1,0 +1,15 @@
+name: "Godot build-solutions"
+description: "Build a Godot project"
+author: remi-san
+inputs:
+  path:
+    description: '[optional] path to the subdirectory containing the project.godot file'
+    default: ""
+runs:
+  using: docker
+  image: Dockerfile
+  args:
+    - ${{ inputs.path }}
+branding:
+  icon: loader
+  color: blue
